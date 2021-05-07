@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
-ARG BINARY="task4"
-ARG PORT=9001
+ARG BINARY="task10"
+ARG PORT=9004
 
 ENV DEBIAN_FRONTEND noninteractive
 

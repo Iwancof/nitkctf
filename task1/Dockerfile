@@ -13,14 +13,14 @@ RUN apt-get -y install socat
 RUN groupadd -r pwn && useradd -r -g pwn pwn
 
 # ファイルの追加
-COPY ./flag.txt /home/pwn/flag.txt
+COPY ./kimitu.txt /home/pwn/kimitu.txt
 COPY ./${BINARY} /home/pwn/${BINARY}
 
 # socatスクリプトの追加
 RUN echo socat TCP-L:${PORT},reuseaddr,fork EXEC:./${BINARY},stderr > /home/pwn/entry.sh
 
 # 権限設定
-RUN chmod 440 /home/pwn/flag.txt
+RUN chmod 440 /home/pwn/kimitu.txt
 RUN chmod 550 /home/pwn/${BINARY}
 RUN chmod 550 /home/pwn/entry.sh
 

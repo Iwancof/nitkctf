@@ -12,6 +12,8 @@ void func() {
   }
 
   puts("[+] func: end");
+
+  return;
 }
 
 
